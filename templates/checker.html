@@ -1,5 +1,46 @@
 <div class="jumbotron text-center">
+  <head>
+    <title>Bootstrap Case</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
   <h1>{{ test_message }}</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+	    <div class="panel panel-default">
+	      <div class="panel-body">
+		    Your password needs an upper case letter 
+		  </div>
+	    </div>
+	   </div>
+	   <div class="col-sm-6">
+	    <div class="panel panel-default">
+	      <div class="panel-body">
+		    Plus some lower case letters
+		  </div>
+	    </div>
+	   </div>
+	   <div class="col-sm-6">
+	    <div class="panel panel-default">
+	      <div class="panel-body">
+		    And also a number
+		  </div>
+	    </div>
+	   </div>
+	   <div class="col-sm-6">
+	    <div class="panel panel-default">
+	      <div class="panel-body">
+		    Finally add a symbol
+		  </div>
+	    </div>
+	  </div>
+    </div>
+  </div>
+  </br>
   <div class="input-group centered">
     <input type="password" class="form-control" ng-model="password">
     <button class="btn btn-success" ng-click="check_password()">Submit</button>

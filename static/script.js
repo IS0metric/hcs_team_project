@@ -22,7 +22,7 @@ app.config(function($routeProvider) {
 app.controller('checker_controller', function($scope, $location) {
   /* Will handle the core of the visual representation, including the random
   characters and symbols, etc */
-  $scope.test_message = "This is where the password checker will be located";
+  $scope.test_message = "Welcome to the password checker";
 
   $scope.check_password = function() {
     // Will handle the core of the password checking and route to next page
