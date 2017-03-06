@@ -3,37 +3,38 @@
     <title>Password Checker</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
-  <h1>{{ test_message }}</h1>
   <div class="container">
     <div class="row">
       <div class="col-sm-3">
-	    <div class="panel panel-default">
+	    <div class="panel panel-default" id="upper_case_panel">
 	      <div class="panel-body">
-		    Your password needs an upper case letter 
+		    Your password needs an upper case letter
+        <h1>{{ random_upper_case }}</h1>
 		  </div>
 	    </div>
 	   </div>
 	   <div class="col-sm-3">
-	    <div class="panel panel-default">
+	    <div class="panel panel-default" id="lower_case_panel">
 	      <div class="panel-body">
 		    Plus some lower case letters
+        <h1>{{ random_lower_case }}</h1>
 		  </div>
 	    </div>
 	   </div>
 	   <div class="col-sm-3">
-	    <div class="panel panel-default">
+	    <div class="panel panel-default" id="number_panel">
 	      <div class="panel-body">
 		    And also a number
+        <h1>{{ random_number }}</h1>
 		  </div>
 	    </div>
 	   </div>
 	   <div class="col-sm-3">
-	    <div class="panel panel-default">
+	    <div class="panel panel-default" id="symbol_panel">
 	      <div class="panel-body">
 		    Finally add a symbol
+        <h1>{{ random_symbol }}</h1>
 		  </div>
 	    </div>
 	  </div>
@@ -41,7 +42,7 @@
   </div>
   </br>
   <div class="input-group centered">
-    <input type="password" class="form-control" ng-model="password">
+    <input type="password" class="form-control" ng-model="password" ng-change="change_password()">
     <button class="btn btn-success" ng-click="check_password()">Submit</button>
   </div>
 </div>

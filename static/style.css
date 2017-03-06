@@ -6,3 +6,8 @@
 .panel{
     height:150px;
     }
+
+.success-panel {
+  background-color: #66ff66;
+  border-color: #008000;
+}
