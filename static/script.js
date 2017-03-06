@@ -16,13 +16,41 @@ app.config(function($routeProvider) {
     });
 });
 
+
+app.directive('update_password', function(){
+
+});
+
+
 /** Main View Controller
  *  Maps the the app's main view, which includes the password checker
  */
 app.controller('checker_controller', function($scope, $location) {
   /* Will handle the core of the visual representation, including the random
   characters and symbols, etc */
-  $scope.test_message = "Welcome to the password checker";
+  $scope.test_message = ""; // To be removed
+
+  $scope.has_symbol = false;
+  $scope.has_lower_case = false;
+  $scope.has_upper_case = false;
+  $scope.has_number = false;
+
+  var symbols = "<>@!#$%^&*()_+[]{}?:;|'\"\\,./~`-=";
+  $scope.random_symbol = symbols[Math.floor(Math.random() * symbols.length)];
+
+  var lower_cases = "abcdefghijklmnopqrstuvwxyz";
+  $scope.random_lower_case = lower_cases[Math.floor(Math.random() * lower_cases.length)];
+
+  var upper_cases = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  $scope.random_upper_case = upper_cases[Math.floor(Math.random() * upper_cases.length)];
+
+  var numbers = "1234567890";
+  $scope.random_number = numbers[Math.floor(Math.random() * numbers.length)];
+
+  console.log($scope.random_number);
+  console.log($scope.random_upper_case);
+  console.log($scope.random_lower_case);
+  console.log($scope.random_symbol);
 
   $scope.check_password = function() {
     // Will handle the core of the password checking and route to next page
