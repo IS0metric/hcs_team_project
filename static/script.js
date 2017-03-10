@@ -82,13 +82,16 @@ app.controller('checker_controller', function($scope, $location) {
     has_upper_case = check_character(password, upper_cases);
     has_number = check_character(password, numbers);
     has_symbol = check_character(password, symbols);
+
     // Check if the password is long enough
     if (password.length >= min_length) {
       is_long_enough = true;
     }
     // Check if the two passwords match
-    if (password == password_copy) {
+    if (password == password_copy && password.length>0) {
       passwords_match = true;
+    } else {
+      passwords_match = false;
     }
 
     // Change the classes for the character and input panels
@@ -97,13 +100,30 @@ app.controller('checker_controller', function($scope, $location) {
     change_class("#number_panel", check_character(password, numbers));
     change_class("#symbol_panel", check_character(password, symbols));
     change_class("#input_panel", passwords_match);
+
+    // Update the password length bar
+    if (password.length <= min_length) {
+      var percentage = (parseFloat(password.length)/parseFloat(min_length)) * parseFloat(100);
+      var width_string = String(percentage) + "%";
+      $("#length_bar").width(width_string);
+    }
+    if (password.length >= min_length) {
+      is_long_enough = true;
+      $("#length_panel").removeClass("failure-panel").addClass("success-panel");
+      $("#length_bar").removeClass("progress-bar-failure").removeClass("progress-bar-default").addClass("progress-bar-success");
+    } else {
+      $("#length_panel").removeClass("success-panel");
+      $("#length_bar").removeClass("progress-bar-success").addClass("progress-bar-default");
+    }
   }
 
   $scope.change_password_copy = function() {
     var password = $scope.password;
     var password_copy = $scope.password_copy;
-    if (password == password_copy) {
+    if (password == password_copy && password.length>0) {
       passwords_match = true;
+    } else {
+      passwords_match = false;
     }
     if (passwords_match == true) {
       $("#input_panel").removeClass("failure-panel").addClass("success-panel");
@@ -131,7 +151,12 @@ app.controller('checker_controller', function($scope, $location) {
       pass = false; $('#length_panel').addClass("failure-panel");
     }
     if (passwords_match != true) {
-      pass = false; $("#input_panel").addClass("failure-panel")
+      pass = false; $("#input_panel").addClass("failure-panel");
+    }
+    if (is_long_enough != true) {
+      pass = false;
+      $("#length_panel").addClass("failure-panel");
+      $("#length_bar").addClass("progress-bar-failure");
     }
     if (pass == true) {
       $location.path("/success");
