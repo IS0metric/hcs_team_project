@@ -51,7 +51,7 @@
         <div class="panel panel-default" id="length_panel">
           <div class="panel-body">
             <div class="progress">
-              <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" style="width: 50%">
+              <div class="progress-bar progress-bar-default progress-bar-striped" role="progressbar" id="length_bar">
               </div>
             </div>
           </div>
@@ -60,14 +60,20 @@
     </div>
     <div class="row">
       <div class="col-sm-12">
-        <div class="panel panel-default" id="input">
+        <div class="panel panel-default" id="input_panel">
           <div class="panel-body">
             <div class="input-group centered">
               <input type="password" class="form-control" ng-model="password" ng-change="change_password()">
+              <input type="password" class="form-control" ng-model="password_copy" ng-change="change_password_copy()">
               <button class="btn btn-success" ng-click="check_password()">Submit</button>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <button class="btn btn-success" ng-click="check_password()">Submit</button>
       </div>
     </div>
   </div>
