@@ -8,6 +8,11 @@
     }
 
 .success-panel {
-  background-color: #66ff66;
+  background-color: #75f0a9;
   border-color: #008000;
+}
+
+.failure-panel {
+  background-color: #FF6666;
+  border-color: #8B0000;
 }
