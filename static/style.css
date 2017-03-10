@@ -3,14 +3,15 @@
     float: none;
 }
 
-.panel{
-    }
-
 .success-panel {
   background-color: #75f0a9;
   border-color: #008000;
 }
 
+.panel-body{
+   padding:5px;
+
+}
 .failure-panel {
   background-color: #FF6666;
   border-color: #8B0000;
