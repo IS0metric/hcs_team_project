@@ -62,19 +62,18 @@
       <div class="col-sm-12">
         <div class="panel panel-default" id="input_panel">
           <div class="panel-body">
+
             <div class="input-group centered">
-              <input type="password" class="form-control" ng-model="password" ng-change="change_password()">
+              <input type="password" class="form-control" ng-model="password" ng-change="change_password()" style = "margin-bottom:5px;">
+
               <input type="password" class="form-control" ng-model="password_copy" ng-change="change_password_copy()">
-              <button class="btn btn-success" ng-click="check_password()">Submit</button>
+ <p>&nbsp; </p>
+     <button class="btn btn-success" ng-click="check_password()" style =  "height:90px; width:400px; padding-top:10px;"><h1>Submit</h1></button> 
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-sm-12">
-        <button class="btn btn-success" ng-click="check_password()">Submit</button>
-      </div>
-    </div>
+    
   </div>
 </div>
