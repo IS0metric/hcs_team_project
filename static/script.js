@@ -17,11 +17,6 @@ app.config(function($routeProvider) {
 });
 
 
-app.directive('update_password', function(){
-
-});
-
-
 /** Main View Controller
  *  Maps the the app's main view, which includes the password checker
  */
@@ -33,6 +28,8 @@ app.controller('checker_controller', function($scope, $location) {
   var has_lower_case = false;
   var has_upper_case = false;
   var has_number = false;
+  var is_long_enough = false;
+  var passwords_match = false;
 
   var symbols = "<>@!#$%^&*()_+[]{}?:;|'\"\\,./~`-=";
   $scope.random_symbol = symbols[Math.floor(Math.random() * symbols.length)];
@@ -46,20 +43,18 @@ app.controller('checker_controller', function($scope, $location) {
   var numbers = "1234567890";
   $scope.random_number = numbers[Math.floor(Math.random() * numbers.length)];
 
-
-
-  console.log($scope.random_number);
-  console.log($scope.random_upper_case);
-  console.log($scope.random_lower_case);
-  console.log($scope.random_symbol);
+  var min_length = 8;
 
   $scope.change_password = function() {
-    password = $scope.password;
+    var password = $scope.password;
+    var password_copy = $scope.password_copy
 
     has_symbol = false;
     has_lower_case = false;
     has_upper_case = false;
     has_number = false;
+    is_long_enough = false;
+    passwords_match = false;
 
     for (var i in lower_cases) {
       if (password.indexOf(lower_cases[i]) > -1) {
@@ -81,54 +76,80 @@ app.controller('checker_controller', function($scope, $location) {
         has_number = true;
       }
     }
+    if (password.length >= min_length) {
+      is_long_enough = true;
+    }
+    if (password != password_copy) {
+      passwords_match = true;
+    }
 
-    if (has_lower_case == true){
+    if (has_lower_case == true) {
       $("#lower_case_panel").removeClass("failure-panel").addClass("success-panel");
     } else {
       $("#lower_case_panel").removeClass("success-panel");
     }
-    if (has_upper_case == true){
+    if (has_upper_case == true) {
       $("#upper_case_panel").removeClass("failure-panel").addClass("success-panel");
     } else {
       $("#upper_case_panel").removeClass("success-panel");
     }
-    if (has_number == true){
+    if (has_number == true) {
       $("#number_panel").removeClass("failure-panel").addClass("success-panel");
     } else {
       $("#number_panel").removeClass("success-panel");
     }
-    if (has_symbol == true){
+    if (has_symbol == true) {
       $("#symbol_panel").removeClass("failure-panel").addClass("success-panel");
     } else {
       $("#symbol_panel").removeClass("success-panel");
+    }
+    if (is_long_enough == true) {
+      $("#length_panel").removeClass("failure-panel").addClass("success-panel");
+    } else {
+      $("#length_panel").removeClass("success-panel");
+    }
+    if (passwords_match == true) {
+      // TODO: Set the passwords input panel to be green
+    } else {
+      // TODO: Set the passwords input panel to be default
     }
   }
 
   $scope.check_password = function() {
     // Will handle the core of the password checking and route to next page
-    var password = $scope.password;
     var pass = true;
-    if (has_lower_case != true){
+    if (has_lower_case != true) {
       pass = false;
       $("#lower_case_panel").addClass("failure-panel");
     }
-    if (has_upper_case != true){
+    if (has_upper_case != true) {
       pass = false;
       $("#upper_case_panel").addClass("failure-panel");
     }
-    if (has_number != true){
+    if (has_number != true) {
       pass = false;
       $("#number_panel").addClass("failure-panel");
     }
-    if (has_symbol != true){
+    if (has_symbol != true) {
       pass = false;
       $("#symbol_panel").addClass("failure-panel");
     }
-    if (pass == true){
+    if (is_long_enough != true) {
+      pass = false;
+      $('#length_panel').addClass("failure-panel");
+    }
+    if (passwords_match != true) {
+      pass = false;
+      // TODO: Set password input panel to be red
+    }
+    if (pass == true) {
       $location.path("/success");
     }
   }
-})
+
+
+});
+
 
 /** Success Controller
  *  Maps to the success page

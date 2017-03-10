@@ -1,65 +1,74 @@
-<div class="jumbotron text-center">
+<div class="container-fluid text-center">
+
   <head>
     <title>Password Checker</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
-    <h1>Password Checker</h1>
-    <h3>Your password requires:</h3>
+  <h1>Password Checker</h1>
+  <h3>Your password requires:</h3>
   <div class="container">
     <div class="row">
       <div class="col-sm-3">
-	    <div class="panel panel-default" id="upper_case_panel">
-	      <div class="panel-body">
-              <p>An upper case letter</p>
-                            <p5>For Example: </p5>
-
-        <h1>{{ random_upper_case }}</h1>
-		  </div>
-	    </div>
-	   </div>
-	   <div class="col-sm-3">
-	    <div class="panel panel-default" id="lower_case_panel">
-	      <div class="panel-body">
-              <p >A lower case letter</p>
-              <h5>For Example: </h5>
-        <h1>{{ random_lower_case }}</h1>
-		  </div>
-	    </div>
-	   </div>
-	   <div class="col-sm-3">
-	    <div class="panel panel-default" id="number_panel">
-	      <div class="panel-body">
-              <p>A number</p>
-                         <h5>For Example: </h5>
-   
-        <h1>{{ random_number }}</h1>
-		  </div>
-	    </div>
-	   </div>
-	   <div class="col-sm-3">
-	    <div class="panel panel-default" id="symbol_panel">
-	      <div class="panel-body">
-		    <p>A symbol<p>
-                     <h5>For Example: </h5>
-       
-        <h1>{{ random_symbol }}</h1>
-		  </div>
-	    </div>
-	  </div>
+        <div class="panel panel-default" id="upper_case_panel">
+          <div class="panel-body">
+            <p>An upper case letter</p>
+            <p5>For Example: </p5>
+            <h1>{{ random_upper_case }}</h1>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="panel panel-default" id="lower_case_panel">
+          <div class="panel-body">
+            <p>A lower case letter</p>
+            <h5>For Example: </h5>
+            <h1>{{ random_lower_case }}</h1>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="panel panel-default" id="number_panel">
+          <div class="panel-body">
+            <p>A number</p>
+            <h5>For Example: </h5>
+            <h1>{{ random_number }}</h1>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="panel panel-default" id="symbol_panel">
+          <div class="panel-body">
+            <p>A symbol</p>
+            <h5>For Example: </h5>
+            <h1>{{ random_symbol }}</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="panel panel-default" id="length_panel">
+          <div class="panel-body">
+            <div class="progress">
+              <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" style="width: 50%">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="panel panel-default" id="input">
+          <div class="panel-body">
+            <div class="input-group centered">
+              <input type="password" class="form-control" ng-model="password" ng-change="change_password()">
+              <button class="btn btn-success" ng-click="check_password()">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  
-  <div class="input-group centered" >
-      <h2>Password Length</h2>
-      <div class="progress " style = "width:1000px; height:40px;">
-  <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="{{}}" aria-valuemin="50" aria-valuemax="100" style="width: 40%;  height: 100px;">
-    <span class="sr-only">40% Complete (success)</span>
-  </div>
-      </div>
-      </br>
-  <div class="input-group centered">
-
-    <input type="password" class="form-control" ng-model="password" ng-change="change_password()" style="width:1000px; height:40px"></div>
-      </br>
-    <button class="btn btn-success" ng-click="check_password()" style =  "height:90px; width:400px; padding-top:10px;">Submit</button>
+</div>
