@@ -9,15 +9,88 @@
 }
 
 .panel-body{
-   padding:5px;
+   padding: 5px;
+   margin: 5px;
+}
 
+.panel-heading {
+  padding: 0;
+  background-color: #dddddd !important;
+  border-radius: 0;
+}
+
+.panel-footer {
+  padding: 0;
+  cursor: pointer;
+  background-color: #dddddd;
+  border-radius: 0;
+  font-weight: bold;
+}
+
+.panel-title {
+  font-size: 20px;
+  padding: 0;
+  font-weight: bold;
+}
+
+.panel-subtitle {
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+}
+
+.panel {
+  margin: 0;
+  border-radius: 0;
+  border-width: 5px;
+}
+
+.example-character {
+  font-size: 52px;
+}
+
+.col-sm-3, .col-sm-12, .col-sm-6 {
+  margin: 0;
+  padding: 5px;
+  height: 100%;
+}
+
+.form-control {
+  margin: 5px;
 }
 
 .clickable-panel a:hover, .clickable-panel a:active {
-   color: #000;
+   color: #fff;
    text-decoration: none;
+   cursor: progress;
 }
+
 .failure-panel {
   background-color: #FF6666;
   border-color: #8B0000;
+}
+
+.main-dark {
+  height: 100vh;
+  background-color: #262626;
+}
+
+.progress {
+  margin:0;
+}
+
+.page-title {
+  color: #FFFFFF;
+  font-size: 52px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.page-subtitle {
+  color: #FFFFFF;
+  font-size: 24px;
+}
+
+hr {
+  margin: 2px;
 }

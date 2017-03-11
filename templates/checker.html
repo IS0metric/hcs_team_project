@@ -1,171 +1,203 @@
-<div class="container-fluid text-center">
-
+<div class="container-fluid text-center main-dark">
   <head>
     <title>Password Checker</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <div class="modal fade" id="upperCase" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Help</h4>
-      </div>
-      <div class="modal-body">
-        Upper case letters make your password more secure. Holding one of the shift keys on the keyboard will allow you to type capital letters. Alternatively, tapping the "Caps lock" key will activate capital letters. Tapping it again changes back to lower case. 
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-
-      </div>
-    </div>
-  </div>
-</div>
-<div class="modal fade" id="lowerCase" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Help</h4>
-      </div>
-      <div class="modal-body">
-        Lower case letters are non capital letters. If your keyboard is typing in capital letters, try tapping your "Caps lock" key to change back to lower case letters. 
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Help</h4>
+        </div>
+        <div class="modal-body">
+          Upper case letters make your password more secure. Holding one of the shift keys on the keyboard will allow you to type capital letters. Alternatively, tapping the "Caps lock" key will activate capital letters. Tapping it again changes back to lower case.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<div class="modal fade" id="numbers" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Help</h4>
-      </div>
-      <div class="modal-body">
-        Numbers make your password more secure. The numbers can be found on the second top row of the keyboard, or on the number pad to the right of your keyboard. 
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-
-      </div>
-    </div>
-  </div>
-</div>
-<div class="modal fade" id="symbols" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Help</h4>
-      </div>
-      <div class="modal-body">
-        Symbols are vital to making a secure password. Example of symbols include "!" which can be typed by holding the shift key and prssing the 1 key. Symbols are mainly accessed by holding the shift key and typing a number key. Some examples include *!%? and $
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-
+  <div class="modal fade" id="lowerCase" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Help</h4>
+        </div>
+        <div class="modal-body">
+          Lower case letters are non capital letters. If your keyboard is typing in capital letters, try tapping your "Caps lock" key to change back to lower case letters.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
-  <h1>Password Checker</h1>
-  <h3>Your password requires:</h3>
+  <div class="modal fade" id="numbers" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Help</h4>
+        </div>
+        <div class="modal-body">
+          Numbers make your password more secure. The numbers can be found on the second top row of the keyboard, or on the number pad to the right of your keyboard.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="symbols" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Help</h4>
+        </div>
+        <div class="modal-body">
+          Symbols are vital to making a secure password. Example of symbols include "!" which can be typed by holding the shift key and prssing the 1 key. Symbols are mainly accessed by holding the shift key and typing a number key. Some examples include *!%? and
+          $
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="length" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Help</h4>
+        </div>
+        <div class="modal-body">
+          Short passwords are much easier for hackers to figure out, so you should make passwords relatively long. 8 characters is a good length, but even longer is better
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="double" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Help</h4>
+        </div>
+        <div class="modal-body">
+          You have to enter your password twice to ensure there are no errors in it. For example, if you meant to enter a password but accidentally typed a character incorrectly, the password would be saved and you wouldn't even know that the wrong character was ther, and wouldn't be able to gain access.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="container">
+    <div class="row">
+        <div class="page-title">Password Checker</div>
+        <hr/>
+        <div class="page-subtitle">Your password requires:</div>
+    </div>
     <div class="row">
       <div class="col-sm-3">
         <div class="panel panel-default" id="upper_case_panel">
-        <div class="panel-heading">
-    <pclass="panel-title"> <p>An Upper Case Letter</p>
-            <h5>For Example: </h5></p>
-  </div>
-          <div class="panel-body">
-            
-            <h1>{{ random_upper_case }}</h1>
+          <div class="panel-heading">
+            <div class="panel-title">An Upper Case Letter</div>
+            <p class="panel-subtitle">For Example:</p>
           </div>
-            <div class="panel-footer" data-toggle="modal" data-target="#upperCase">Help</div>
+          <div class="panel-body">
+            <div class="example-character">{{ random_upper_case }}</div>
+          </div>
+          <div class="panel-footer" data-toggle="modal" data-target="#upperCase">Help</div>
         </div>
       </div>
       <div class="col-sm-3">
         <div class="panel panel-default" id="lower_case_panel">
-        <div class="panel-heading">
-    <pclass="panel-title"> <p>A Lower Case Letter</p>
-            <h5>For Example: </h5></p>
-  </div>
-          <div class="panel-body">
-       
-            <h1>{{ random_lower_case }}</h1>
+          <div class="panel-heading">
+              <div class="panel-title">A Lower Case Letter</div>
+              <p class="panel-subtitle">For Example:</p>
           </div>
-                      <div class="panel-footer" data-toggle="modal" data-target="#lowerCase">Help</div>
+          <div class="panel-body">
+            <div class="example-character">{{ random_lower_case }}</div>
+          </div>
+          <div class="panel-footer" data-toggle="modal" data-target="#lowerCase">Help</div>
         </div>
       </div>
       <div class="col-sm-3">
         <div class="panel panel-default" id="number_panel">
-        <div class="panel-heading">
-    <pclass="panel-title"> <p>A Number</p>
-            <h5>For Example: </h5></p>
-  </div>
-          <div class="panel-body">
-         
-           
-            <h1>{{ random_number }}</h1>
+          <div class="panel-heading">
+              <div class="panel-title">A Number</div>
+              <p class="panel-subtitle">For Example:</p>
           </div>
-                      <div class="panel-footer" data-toggle="modal" data-target="#numbers">Help</div>
+          <div class="panel-body">
+            <div class="example-character">{{ random_number }}</div>
+          </div>
+          <div class="panel-footer" data-toggle="modal" data-target="#numbers">Help</div>
         </div>
       </div>
       <div class="col-sm-3">
         <div class="panel panel-default" id="symbol_panel">
-        <div class="panel-heading">
-    <pclass="panel-title"> <p>A Symbol</p>
-            <h5>For Example: </h5></p>
-  </div>
-          <div class="panel-body">
-
-
-            <h1>{{ random_symbol }}</h1>
+          <div class="panel-heading">
+              <div class="panel-title">A Symbol</div>
+              <p class="panel-subtitle">For Example:</p>
           </div>
-                   <div class="panel-footer clickable-panel" data-toggle="modal" data-target="#symbols">Help</div>
+          <div class="panel-body">
+            <div class="example-character">{{ random_symbol }}</div>
+          </div>
+          <div class="panel-footer clickable-panel" data-toggle="modal" data-target="#symbols">Help</div>
         </div>
       </div>
     </div>
     <div class="row">
       <div class="col-sm-12">
         <div class="panel panel-default" id="length_panel">
+          <div class="panel-heading">
+            <div class="panel-title">Your password will need to be at least 8 characters long</div>
+          </div>
           <div class="panel-body">
             <div class="progress">
               <div class="progress-bar progress-bar-default progress-bar-striped" role="progressbar" id="length_bar">
               </div>
             </div>
           </div>
+          <div class="panel-footer" data-toggle="modal" data-target="#length">
+            Why do I need to do this?
+          </div>
         </div>
       </div>
     </div>
     <div class="row">
-      <div class="col-sm-12">
+      <div class="col-sm-6">
         <div class="panel panel-default" id="input_panel">
+          <div class="panel-heading">
+            <div class="panel-title">Enter your password twice below</div>
+          </div>
           <div class="panel-body">
-
-            <div class="input-group centered">
-              <input type="password" class="form-control" ng-model="password" ng-change="change_password()" style = "margin-bottom:5px;">
-
+              <input type="password" class="form-control" ng-model="password" ng-change="change_password()">
               <input type="password" class="form-control" ng-model="password_copy" ng-change="change_password_copy()">
-
-    
-            </div>
           </div>
+          <div class="panel-footer" data-toggle="modal" data-target="#double">
+            Why do I need to do this?
           </div>
-          <div class="panel panel-default">
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="panel panel-default">
           <div class="panel-body">
-           <button class="btn btn-success" ng-click="check_password()" style =  "height:90px; width:400px; padding-top:10px;"><h1>Submit</h1></button> 
-           </div>
-           </div>
+            <button class="btn btn-success" ng-click="check_password()" style="height:90px; width:400px; padding-top:10px;"><h1>Submit</h1></button>
+          </div>
         </div>
       </div>
     </div>
-    
   </div>
+
 </div>
