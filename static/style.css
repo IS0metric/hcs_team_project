@@ -59,6 +59,18 @@
   margin: 5px;
 }
 
+.modal-body{
+  font-size:20px;
+  font-weight:bold;
+}
+.modal-title{
+  font-size:25px;
+  font-weight:bold;
+}
+.btn-default{
+  font-size:20px;
+  font-weight:bold;
+}
 .clickable-panel a:hover, .clickable-panel a:active {
    color: #fff;
    text-decoration: none;
